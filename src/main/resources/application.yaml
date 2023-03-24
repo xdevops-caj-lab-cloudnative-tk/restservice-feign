@@ -1,0 +1,25 @@
+myapp:
+  quotes:
+    host: http://localhost:8081
+
+# Spring Boot 2 (OpenFeign 3) configuration
+#feign:
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+
+
+# Spring Boot 3 (OpenFeign 4) configuration
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 5000
+            readTimeout: 5000
+          quotes:
+            url: http://localhost:8081
+
